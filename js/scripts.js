@@ -4,7 +4,7 @@ $(document).ready(function() {
     event.preventDefault();
     var firstSentence = $("#firstSentence").val();
 
-    $("#result").append(firstSentence);
+    $("#result").text(firstSentence);
 
   })
 })
