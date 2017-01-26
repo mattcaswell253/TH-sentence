@@ -1,12 +1,15 @@
-function wordReplace(splitWord) {
-var splitSentence = firstSentence.split(" ");
-var splitWord = splitSentence[i];
-
-for (var i = 0; i < splitWord.length; i++) {
-  if (splitWord[0] === "t" && splitWord[1] === "h")
-  splitWord.toUpperCase();
-}
-
+function wordReplace(firstSentence) {
+  var splitSentence = firstSentence.split(" ");
+  var answer = "";
+  for (var i = 0; i < splitSentence.length; i++) {
+    var splitWord = splitSentence[i];
+    if (splitWord[0] === "t" && splitWord[1] === "h") {
+      return splitWord.toUpperCase();
+    } else {
+      return splitWord;
+    }
+  }
+  return answer;
 }
 
 
@@ -21,8 +24,8 @@ $(document).ready(function() {
     // var th = words.startsWith("th");
     // var up = firstSentence.toUpperCase();
     // $("#result").text(up);
-    $("#result").text(wordReplace);
+    // $("#result").text(splitWord);
 
-    wordReplace(splitWord)
+    wordReplace(firstSentence);
   })
 })
